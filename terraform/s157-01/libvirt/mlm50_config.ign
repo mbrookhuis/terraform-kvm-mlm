@@ -1,0 +1,16 @@
+{
+  "ignition": {
+    "version": "3.2.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "root",
+        "passwordHash": "$2a$10$FIcYc4mnAnaKi0XgnsiGW.8b9B9mf9/fcIH4gok.WXeRN2//INCqm",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaZ1YSiIDIWTMzcAg/tMikj/qVSbH4jTxPR5UKU9ejZHVtkYvFj27hIrmBRxnuy41Yg8jdBEYa+sBrMsE7hQ0AORIKs7eS2RG5Z6KGS7Lk5vP7qXz7ri7abqpvkSHCe1MIzc7hMggG98KePe4StCKkrK9 root@mblab\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC60MkiI76TZJ+mbtuWXGw02pxH//pNthxuBW+a0RdIiJLXkC/ZZPmd+9jfBpCqB0wV6fVEpSH/GUf5zVfKbh5tXKL7pCBEDX8fjsGFCocMeIuyguy2szSNdszu2e8foO0hx9m9gfG2tiuRMeYir6yQEqj mbrookhuis@mp
+        ]
+      }
+    ]
+  }
+}

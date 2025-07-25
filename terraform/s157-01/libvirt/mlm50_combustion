@@ -1,0 +1,25 @@
+#!/bin/bash
+# combustion: network
+# script generated with https://opensuse.github.io/fuel-ignition/
+
+# Redirect output to the console
+exec > >(exec tee -a /dev/tty0) 2>&1
+
+# Keyboard
+systemd-firstboot --force --keymap=us-intl
+
+# Timezone
+systemd-firstboot --force --timezone=Europe/Amsterdam
+
+echo 'root:$5$.$2a$10$qgZI5hisD/WmqZPdhUzoC.S7cnEhR4zjx0LRvP9fZwNmxHR.QTUeK' | chpasswd -e
+# Add a public ssh key and enable sshd
+mkdir -pm700 /root/.ssh/
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHl8B6ZbpKCS4LcPkuhv06SZqBX2yCL4rXEor/yAXvCF root@s157-01" >> /root/.ssh/authorized_keys
+
+# Leave a marker
+echo "Configured with combustion" > /etc/issue.d/combustion
+
+# Close outputs and wait for tee to finish.
+exec 1>&- 2>&-; wait;
+
+
